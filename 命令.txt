@@ -1,0 +1,7 @@
+保存格式nuscenes/mini/...
+python main.py eval_model_iou mini --modelf=/model525000.pt --dataroot=/root/autodl-tmp/nuscenes --gpuid=0
+python main.py viz_model_preds mini --modelf=/model525000.pt --dataroot=/root/autodl-tmp/nuscenes --map_folder=/root/autodl-tmp/nuscenes/mini --gpuid=0
+python main.py train mini --dataroot=/root/autodl-tmp/nuscenes --logdir=./runs --gpuid=0
+tensorboard --logdir=./runs --bind_all
+
+ssh fengkaiqi@118.178.187.157 -p 6001
